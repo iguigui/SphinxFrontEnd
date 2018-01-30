@@ -11,55 +11,211 @@
   <title>Node Tuto</title>
 </head>
 <body>
+<div class="header" style="height:85px;background-color:#1a3f71;">
+  <img id="vtsLogo" src="./images/SPHiNX_logo.png" alt="SPHiNX logo" style="position:absolute;top:10px;left:15px;width:145px;">
+</div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#">Disabled</a>
+      </li>
+    </ul>
+<!--     <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form> -->
+  </div>
+</nav>
 <div class="container">
     <br>
-    <div class="jumbotron">
-        <h1 class="display-4">Send Message</h1>
-        <br>
-        <input id="name" class="form-control" placeholder="Name">
-        <br>
-        <textarea id="message" class="form-control" placeholder="Message"></textarea>
-        <br>
-        <button id="send" class="btn btn-success">Send</button>
+    <div class="row">
+      <div class="col-md-6">
+        <h3>Appliance Infos</h3>
+        <div>  
+          <ul id="applianceInfos" style="list-style-type:none">
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <h3>Services</h3>
+        <div id="services">
+          <table class="table">
+            <thead class="thead-sphinx">
+              <tr>
+                <th scope="col">Service</th>
+                <th scope="col">Active</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>TAPESERVER</td>
+                <td>YES</td>
+              </tr>
+            </tbody>  
+          </table>    
+        </div>   
+      </div>
     </div>
-    <div id="messages">
-
+    <!-- row end -->     
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Virtual Device Status</h3>
+        <div id="services">
+          <table class="table">
+            <thead class="thead-sphinx">
+              <tr>
+                <th scope="col">Status</th>
+                <th scope="col">Device Name</th>
+                <th scope="col">Type</th>
+                <th scope="col">Last Command</th>
+                <th scope="col">KB/sec</th>
+                <th scope="col">Bytes Transferred</th>
+                <th scope="col">Virtual Media</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>  
+          </table>    
+        </div>   
+      </div> 
     </div>
+    <!-- row end -->     
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Job Status</h3>
+        <div id="services">
+          <table class="table">
+            <thead class="thead-sphinx">
+              <tr>
+                <th scope="col">Job Name</th>
+                <th scope="col">Job Type</th>
+                <th scope="col">Job Description</th>
+                <th scope="col">Time</th>
+                <th scope="col">Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>  
+          </table>    
+        </div>   
+      </div> 
+    </div>
+    <!-- row end -->     
+    <div class="row">
+      <div class="col-md-12">
+        <h3>Storage</h3>
+        <div id="services">
+          <table class="table">
+            <thead class="thead-sphinx">
+              <tr>
+                <th scope="col">Storage Location</th>
+                <th scope="col">Sized</th>
+                <th scope="col">Used</th>
+                <th scope="col">Quota</th>
+                <th scope="col">Available</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="trbold">
+                <td>Storage(zfs)</td>
+                <td>2.61T</td>
+                <td>11.17G</td>
+                <td></td>
+                <td>2.60T (100%)</td>
+              </tr>
+              <tr>
+                <td>VAULT01</td>
+                <td></td>
+                <td>11.17G</td>
+                <td>100.00G</td>
+                <td>2.60T (100%)</td>
+              </tr>               
+              <tr class="trbold">
+                <td>VAULT00(ext4)</td>
+                <td>223G</td>
+                <td>63M</td>
+                <td></td>
+                <td>212G (99%)</td>
+              </tr>              
+            </tbody>  
+          </table>    
+        </div>   
+      </div> 
+    </div>
+    <!-- row end -->     
 </div>
 
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
 
-  <!-- SCRIPT -->
-  <script> 
-  
-    $(()=>{
-      console.log('loaded')
+<!-- SCRIPT -->
+<script> 
 
-      $("#send").click(()=>{
-        var message = {name : $('#name').val(), message : $('#message').val() }
-        // postMessage(message)  
-      })
-      getMessages()
+  $(()=>{
+    console.log('loaded')
+    getApplianceInfos()
+  })
+
+  function getApplianceInfos(){
+    $.get('http://localhost:3001/applianceInfos', (data) => {
+      // console.log(data["0"].name)
+      var html = `
+        <li><b>Name: </b>${data["0"].name}</li>
+        <li><b>Product Version: </b>${data["0"].productVersion}</li>
+        <li><b>Serial Number: </b>${data["0"].serialNumber}</li>
+      `;
+      $('#applianceInfos').append(html);
     })
+  }
 
-    function addMessage(message){
-      $('#messages').append(`<h4> ${message.name} </h4> <p> ${message.message}</p>`)
-      console.log(message.name, message.message)
-    }
-
-    function getMessages(){
-      $.get('http://localhost:3001/messages', (data) => {
-        data.forEach(addMessage);
-      })
-    }
-
-    // function postMessage(message){
-    //   $.post('http://localhost:3000/messages', message)
-    // }
-  </script>  
+  // function postMessage(message){
+  //   $.post('http://localhost:3000/messages', message)
+  // }
+</script> 
+<style>
+  .thead-sphinx{background-color:#4a6e91; color:#eee;}
+  .trbold{font-weight: bold;}
+</style>  
 </body>

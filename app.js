@@ -14,7 +14,7 @@ var server = app.listen(3001, () => {
 
 var messages = [{name:"Andrew", message:"lol"}, {name:"Mimi", message:"oui"}]
 
-app.get('/messages', (req,res) =>{
+app.get('/applianceInfos', (req,res) =>{
 
     fetch('http://localhost:3000/system-status')
     .then(res => {
