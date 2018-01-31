@@ -15,7 +15,6 @@
   <img id="vtsLogo" src="./images/SPHiNX_logo.png" alt="SPHiNX logo" style="position:absolute;top:10px;left:15px;width:145px;">
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -23,24 +22,76 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Link</a>
+        <a class="nav-link" href="#">System Status<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Dropdown
+          Administration
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="#">Something else here</a>
+          <a class="dropdown-item" href="#">Virtual Tapes</a>
+          <a class="dropdown-item" href="#">External Data</a>
+          <a class="dropdown-item" href="#">Jobs</a>
+          <a class="dropdown-item" href="#">Virtual Devices</a>
+          <a class="dropdown-item" href="#">Mounts and Locks</a>
+          <a class="dropdown-item" href="#">System Tasks</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Configuration
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Virtual Devices</a>
+          <a class="dropdown-item" href="#">Tapes and Pools</a>
+          <a class="dropdown-item" href="#">Policies</a>
+          <a class="dropdown-item" href="#">Data Encryption</a>
+          <a class="dropdown-item" href="#">System</a>
+          <a class="dropdown-item" href="#">ZFS Vaults</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Reports
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Storage Report</a>
+          <a class="dropdown-item" href="#">Export Report</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Security
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Access Control</a>
+          <a class="dropdown-item" href="#">Certificates</a>
+          <a class="dropdown-item" href="#">Passwords</a>
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Support
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">System Updates</a>
+          <a class="dropdown-item" href="#">SG Map</a>
+          <a class="dropdown-item" href="#">Logs</a>
+          <a class="dropdown-item" href="#">Trouble Shooting</a>
         </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled" href="#">Disabled</a>
+        <a class="nav-link" href="#">About</a>
+      </li>
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li class="nav-item inactive">
+        <a class="nav-link" href="#">admin@vts42</a>
+      </li>
+      <li class="nav-item">
+        <p class="navbar-btn">
+                    <a href="#" class="btn btn-default">Logout</a>
+        </p>
       </li>
     </ul>
 <!--     <form class="form-inline my-2 my-lg-0">
@@ -51,16 +102,20 @@
 </nav>
 <div class="container">
     <br>
+    <h2>System Status</h2>
     <div class="row">
       <div class="col-md-6">
-        <h3>Appliance Infos</h3>
+        <div class="dashboard-element">
+        <h4 class="dashboard-element-title">Appliance Infos</h4>
         <div>  
           <ul id="applianceInfos" style="list-style-type:none">
           </ul>
         </div>
+        </div class="dashboard-element">
       </div>
       <div class="col-md-6">
-        <h3>Services</h3>
+        <div class="dashboard-element">
+        <h4 class="dashboard-element-title">Services</h4>
         <div id="services">
           <table class="table">
             <thead class="thead-sphinx">
@@ -76,13 +131,15 @@
               </tr>
             </tbody>  
           </table>    
-        </div>   
+        </div> 
+        </div class="dashboard-element">  
       </div>
     </div>
     <!-- row end -->     
     <div class="row">
       <div class="col-md-12">
-        <h3>Virtual Device Status</h3>
+        <div class="dashboard-element">
+        <h4 class="dashboard-element-title">Virtual Device Status</h4>
         <div id="services">
           <table class="table">
             <thead class="thead-sphinx">
@@ -108,13 +165,15 @@
               </tr>
             </tbody>  
           </table>    
-        </div>   
+        </div> 
+        </div class="dashboard-element">  
       </div> 
     </div>
     <!-- row end -->     
     <div class="row">
       <div class="col-md-12">
-        <h3>Job Status</h3>
+        <div class="dashboard-element">
+        <h4 class="dashboard-element-title">Job Status</h4>
         <div id="services">
           <table class="table">
             <thead class="thead-sphinx">
@@ -136,13 +195,15 @@
               </tr>
             </tbody>  
           </table>    
-        </div>   
+        </div> 
+        </div class="dashboard-element">  
       </div> 
     </div>
     <!-- row end -->     
     <div class="row">
       <div class="col-md-12">
-        <h3>Storage</h3>
+        <div class="dashboard-element">
+        <h4 class="dashboard-element-title">Storage</h4>
         <div id="services">
           <table class="table">
             <thead class="thead-sphinx">
@@ -180,6 +241,7 @@
           </table>    
         </div>   
       </div> 
+    </div class="dashboard-element">
     </div>
     <!-- row end -->     
 </div>
@@ -196,6 +258,21 @@
   $(()=>{
     console.log('loaded')
     getApplianceInfos()
+
+    //fixed top nav-bar when scrolled down
+    $(function(){
+      var hasBeenTrigged = false;
+      $(window).scroll(function() {
+          if ($(this).scrollTop() >= 85 && !hasBeenTrigged) {
+              $(".navbar").addClass('fixed-top');
+              hasBeenTrigged = true;
+          }
+          if ($(this).scrollTop() < 85 && hasBeenTrigged){
+              $(".navbar").removeClass('fixed-top');
+              hasBeenTrigged = false;
+          }
+      });
+    });
   })
 
   function getApplianceInfos(){
@@ -205,6 +282,8 @@
         <li><b>Name: </b>${data["0"].name}</li>
         <li><b>Product Version: </b>${data["0"].productVersion}</li>
         <li><b>Serial Number: </b>${data["0"].serialNumber}</li>
+        <li><b>System Time:</b></li>
+        <li><b>Uptime:</b></li>
       `;
       $('#applianceInfos').append(html);
     })
@@ -217,5 +296,13 @@
 <style>
   .thead-sphinx{background-color:#4a6e91; color:#eee;}
   .trbold{font-weight: bold;}
+
+  .dashboard-element {
+    margin: 10px 5px;
+    padding: 20px 20px 10px;
+  }
+  .dashboard-element-title{
+    margin-bottom:30px;
+  }
 </style>  
 </body>
