@@ -106,17 +106,16 @@
     <div class="row">
       <div class="col-md-6">
         <div class="dashboard-element">
-        <h4 class="dashboard-element-title">Appliance Infos</h4>
-        <div>  
-          <ul id="applianceInfos" style="list-style-type:none">
-          </ul>
+          <h4 class="dashboard-element-title">Appliance Infos</h4>
+          <div>  
+            <ul id="applianceInfos" style="list-style-type:none">
+            </ul>
+          </div>
         </div>
-        </div class="dashboard-element">
       </div>
       <div class="col-md-6">
         <div class="dashboard-element">
         <h4 class="dashboard-element-title">Services</h4>
-        <div id="services">
           <table class="table">
             <thead class="thead-sphinx">
               <tr>
@@ -131,50 +130,66 @@
               </tr>
             </tbody>  
           </table>    
-        </div> 
-        </div class="dashboard-element">  
+        </div>  
       </div>
     </div>
     <!-- row end -->     
     <div class="row">
       <div class="col-md-12">
         <div class="dashboard-element">
-        <h4 class="dashboard-element-title">Virtual Device Status</h4>
-        <div id="services">
-          <table class="table">
-            <thead class="thead-sphinx">
-              <tr>
-                <th scope="col">Status</th>
-                <th scope="col">Device Name</th>
-                <th scope="col">Type</th>
-                <th scope="col">Last Command</th>
-                <th scope="col">KB/sec</th>
-                <th scope="col">Bytes Transferred</th>
-                <th scope="col">Virtual Media</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>  
-          </table>    
-        </div> 
-        </div class="dashboard-element">  
+          <h4 class="dashboard-element-title">Virtual Device Status</h4>
+          <div id="services">
+            <table class="table">
+              <thead class="thead-sphinx">
+                <tr>
+                  <th scope="col">Status</th>
+                  <th scope="col">Device Name</th>
+                  <th scope="col">Type</th>
+                  <th scope="col">Last Command</th>
+                  <th scope="col">KB/sec</th>
+                  <th scope="col">Bytes Transferred</th>
+                  <th scope="col">Virtual Media</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Enabled</td>
+                  <td>vtd01</td>
+                  <td>ULT3580-TD4</td>
+                  <td>MODE_SELECT_6</td>
+                  <td>0</td>
+                  <td>0 Bytes</td>
+                  <td>/VAULT40/QPool01/QU0118</td>
+                </tr>
+                <tr>
+                  <td>Enabled</td>
+                  <td>vtd02</td>
+                  <td>ULT3580-TD4</td>
+                  <td>MODE_SELECT_6</td>
+                  <td>0</td>
+                  <td>0 Bytes</td>
+                  <td>/VAULT40/QPool02/QU0209</td>
+                </tr>
+                <tr>
+                  <td>Enabled</td>
+                  <td>vtd03</td>
+                  <td>ULT3580-TD4</td>
+                  <td>MODE_SELECT_6</td>
+                  <td>0</td>
+                  <td>0 Bytes</td>
+                  <td>/VAULT40/QPool03/QU0303</td>
+                </tr>
+              </tbody>  
+            </table>    
+          </div> 
+        </div>  
       </div> 
     </div>
     <!-- row end -->     
     <div class="row">
       <div class="col-md-12">
         <div class="dashboard-element">
-        <h4 class="dashboard-element-title">Job Status</h4>
-        <div id="services">
+          <h4 class="">Job Status</h4> <p class="dashboard-element-title">Displays running jobs, jobs that are scheduled to run in the next 4 hours and jobs that completed in the last 4 hours</p>
           <table class="table">
             <thead class="thead-sphinx">
               <tr>
@@ -187,24 +202,41 @@
             </thead>
             <tbody>
               <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
+                <td>Decrypt011218121323</td>
+                <td>Decrypt Job</td>
+                <td>Decrypt 3 cartridges</td>
+                <td>Fri Jan 12 12:17 2018</td>
+                <td>Completed</td>
               </tr>
+              <tr>
+                <td>Decrypt011218121322</td>
+                <td>Decrypt Job</td>
+                <td>Decrypt 3 cartridges</td>
+                <td>Fri Jan 12 11:17 2018</td>
+                <td>Failed</td>
+              </tr>
+              <tr>
+                <td>Decrypt011218121321</td>
+                <td>Decrypt Job</td>
+                <td>Decrypt 3 cartridges</td>
+                <td>Fri Jan 12 10:17 2018</td>
+                <td>Failed</td>
+              </tr>
+
             </tbody>  
           </table>    
-        </div> 
-        </div class="dashboard-element">  
+        </div>  
       </div> 
     </div>
     <!-- row end -->     
     <div class="row">
       <div class="col-md-12">
         <div class="dashboard-element">
-        <h4 class="dashboard-element-title">Storage</h4>
-        <div id="services">
+          <h4 class="dashboard-element-title">Storage</h4>
+          <ul id="applianceInfos" style="list-style-type:none">
+            <li><b>Licensed Capacity:</b> 500TB</li>
+            <li><b>Used Capacity:</b> 2.1TB</li>
+          </ul>
           <table class="table">
             <thead class="thead-sphinx">
               <tr>
@@ -238,10 +270,9 @@
                 <td>212G (99%)</td>
               </tr>              
             </tbody>  
-          </table>    
-        </div>   
-      </div> 
-    </div class="dashboard-element">
+          </table>  
+        </div>    
+      </div>
     </div>
     <!-- row end -->     
 </div>
